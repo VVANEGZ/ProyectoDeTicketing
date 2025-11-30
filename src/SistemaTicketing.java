@@ -9,7 +9,7 @@ public class SistemaTicketing {
     public SistemaTicketing() {
         this.listaIncidencias = new ArrayList<>();
         this.listaTecnicos = new ArrayList<>();
-        this.reporte = new Reporte(); // AHORA SÍ se crea correctamente
+        this.reporte = new Reporte();
         cargarTecnicosIniciales();
     }
 
@@ -88,13 +88,10 @@ public class SistemaTicketing {
             }
         }
     }
-
-    // HU1 - Folios únicos
     public String generarFolio() {
         return "INC" + String.format("%03d", listaIncidencias.size() + 1);
     }
 
-    // HU6 - Reporte general del laboratorio
     public void GenerarReporte() {
         System.out.println("\n===== REPORTE GENERAL DEL LABORATORIO =====");
         reporte.generarPorEstado(listaIncidencias);

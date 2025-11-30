@@ -10,9 +10,9 @@ public class Main {
 
         do {
             System.out.println("\n===== SISTEMA TICKETING LAB-LIS =====");
-            System.out.println("1. Registrar incidencia (Estudiante/Académico)");
-            System.out.println("2. Filtrar incidencias (Técnico)");
-            System.out.println("3. Cambiar estado (Técnico)");
+            System.out.println("1. Registrar incidencia (Estudiante/Academico)");
+            System.out.println("2. Filtrar incidencias (Tecnico)");
+            System.out.println("3. Cambiar estado (Tecnico)");
             System.out.println("4. Generar reporte");
             System.out.println("5. Salir");
             System.out.print("Seleccione: ");
@@ -38,13 +38,13 @@ public class Main {
 
         String folio = sistema.generarFolio();
 
-        System.out.print("Descripción: ");
+        System.out.print("Descripcion: ");
         String descripcion = teclado.nextLine();
 
         System.out.print("Equipo afectado (PC-XX): ");
         String equipo = teclado.nextLine();
 
-        System.out.println("Tipo: 1.HARDWARE  2.SOFTWARE  3.RED");
+        System.out.println("Tipo: \n 1.HARDWARE \n 2.SOFTWARE \n 3.RED");
         int t = teclado.nextInt();
         teclado.nextLine();
 
@@ -52,7 +52,7 @@ public class Main {
                 (t == 2) ? TipoIncidencia.SOFTWARE :
                         TipoIncidencia.RED;
 
-        System.out.println("Prioridad: 1.Baja 2.Media 3.Alta");
+        System.out.println("Prioridad: \n 1.Baja \n 2.Media \n 3.Alta");
         int p = teclado.nextInt();
         teclado.nextLine();
 
@@ -80,7 +80,7 @@ public class Main {
 
         switch (op) {
             case 1 -> {
-                System.out.println("Tipo: 1.HARDWARE 2.SOFTWARE 3.RED");
+                System.out.println("Tipo:\n 1.HARDWARE \n 2.SOFTWARE \n 3.RED");
                 int t = teclado.nextInt();
                 teclado.nextLine();
                 sistema.filtrarPorTipo(
@@ -91,7 +91,7 @@ public class Main {
             }
 
             case 2 -> {
-                System.out.println("Prioridad: 1.Baja 2.Media 3.Alta");
+                System.out.println("Prioridad: \n 1.Baja \n 2.Media \n 3.Alta");
                 int p = teclado.nextInt();
                 teclado.nextLine();
                 sistema.filtrarPorPrioridad(
@@ -102,7 +102,7 @@ public class Main {
             }
 
             case 3 -> {
-                System.out.println("Estado: 1.Nuevo 2.En Progreso 3.Pendiente 4.Resuelto 5.Cerrado");
+                System.out.println("Estado: \n 1.Nuevo \n 2.En Progreso \n 3.Pendiente \n 4.Resuelto \n 5.Cerrado");
                 int e = teclado.nextInt();
                 teclado.nextLine();
                 sistema.filtrarPorEstado(
