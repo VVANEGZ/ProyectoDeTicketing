@@ -85,15 +85,15 @@ public class Incidencia {
 
     @Override
     public String toString() {
-        return "Incidencia:" +
-                "folio='" + folio + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                ", fecha=" + fecha +
-                ", equipoAfectado='" + equipoAfectado + '\'' +
-                ", tipoIncidencia=" + tipoIncidencia +
-                ", prioridad=" + prioridad +
-                ", estado=" + estado +
-                ", tecnicoAsignado=" +(tecnicoAsignado !=null ? tecnicoAsignado.getNombre() : "Sin asignar");
-
+        return "\n--- INCIDENCIA ---" +
+                "\nFolio: " + folio +
+                "\nDescripción: " + descripcion +
+                "\nFecha: " + fecha +
+                "\nEquipo: " + equipoAfectado +
+                "\nTipo: " + tipoIncidencia +
+                "\nPrioridad: " + prioridad +
+                "\nEstado: " + estado +
+                "\nTécnico asignado: " + (tecnicoAsignado != null ? tecnicoAsignado.getNombre() : "Sin asignar") +
+                "\n---------------------";
     }
 }

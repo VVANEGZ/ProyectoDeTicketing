@@ -1,3 +1,5 @@
 public enum TipoIncidencia {
-    HARDWARE, SOFTWARE, RED;
+    HARDWARE,
+    SOFTWARE,
+    RED;
 }
